@@ -7,9 +7,10 @@ int main()
     cin >> t;
     while (t--)
     {
-        int k, x, n = 0;
+        int k, x;
         string s;
         cin >> k >> s;
+        long long n = 0;
         map<char, int> m;
         priority_queue<int> q;
         for (int i = 0; i < s.size(); i++)
@@ -24,7 +25,7 @@ int main()
         }
         while (q.size())
         {
-            n += q.top() * q.top();
+            n += (long long)q.top() * q.top();
             q.pop();
         }
         cout << n << endl;
